@@ -1,0 +1,17 @@
+npm init
+
+npm i express body-parser pusher cors mongoose --save
+
+Used materialized CSS
+Setup CDN scripts in html for
+canvas js
+pusher
+
+
+
+Use mlab for mongodb database
+
+mongodb://<dbuser>:<dbpassword>@ds121248.mlab.com:21248/hfpusherexample
+
+This still need some more functionality...
+ 
