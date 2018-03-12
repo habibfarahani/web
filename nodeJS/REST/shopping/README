@@ -1,0 +1,35 @@
+npm install --save express
+
+Set up express (server.js and app.js
+set up routes (api/routes/product and use in app.js
+        In this case products.js has all the REST api we need for roducts.
+
+
+To path (update):
+        
+        
+[
+	{"propName": "name", "value": "Harry Potter 6"}
+]
+
+[
+	{"propName": "price", "value": "6.99"},
+	{"propName": "name", "value": "The Original Harry Potter" }
+]
+
+Post:
+{
+	"name": "Harry potter 6",
+	"price": "19.99"
+}
+
+Mongoose
+1. Select
+2. populate
+
+
+for orders:
+{
+	"productId": "5a93859711c6bb4794b01e2d",
+	"quantity" : "2"
+}
