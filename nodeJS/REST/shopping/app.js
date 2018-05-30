@@ -10,15 +10,19 @@ const mongoose = require('mongoose');
 // Import products route so all REST api will be handled by this route.
 const productRoutes = require('./api/routes/products');
 const ordersRoutes = require('./api/routes/orders');
+const usersRoutes = require('./api/routes/user');
 
 
 mongoose.connect('mongodb://habibfarahani:' + process.env.MONGO_ATLAS_PW + '@shoppingcluster-shard-00-00-ggnhy.mongodb.net:27017,shoppingcluster-shard-00-01-ggnhy.mongodb.net:27017,shoppingcluster-shard-00-02-ggnhy.mongodb.net:27017/test?ssl=true&replicaSet=shoppingcluster-shard-0&authSource=admin', {
     //    userMongoClient: true
 });
 
+
 mongoose.promise = global.Promise;
 
 app.use(morgan('dev'));
+app.use('/uploads', express.static('uploads')); // Make uploads folder available
+// a better and secure way is to create an get API specifically for uploads.
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -38,6 +42,7 @@ app.use((req, res, next) => {
 // Route which should handle the REST requests
 app.use('/products', productRoutes); // All /priduct requistes will be routed appropriately.
 app.use('/orders', ordersRoutes); // All /priduct requistes will be routed appropriately.
+app.use('/user', usersRoutes); // All /priduct requistes will be routed appropriately.
 
 // handle all errors that make it past these requests
 

@@ -1,0 +1,12 @@
+Test firebse functions locally
+
+1. compile into javascript
+    a. cd into functions and run 
+    npm run-script lint  // Tocheck
+    npm run-script build // t compile the typescript
+    firebase serve --only functions // To run the functions
+
+    Can use curl to touch the url
+
+    Remember for http clients we need to send a response at the end of the function.
+    background triggers - return a promise 

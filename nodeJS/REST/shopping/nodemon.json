@@ -1,5 +1,6 @@
 {
     "env": {
-        "MONGO_ATLAS_PW": "Mynahid-12"
+        "MONGO_ATLAS_PW": "Mynahid-12",
+        "JWT_KEY": "SecretPasswordHabib"
     }
 }

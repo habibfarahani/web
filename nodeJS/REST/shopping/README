@@ -33,3 +33,39 @@ for orders:
 	"productId": "5a93859711c6bb4794b01e2d",
 	"quantity" : "2"
 }
+
+
+-- Chained populate with 'Product' using the ref property, to get product detail information
+ .populate('Product')
+
+ If we are only interested in a s[ecific field we can:
+ .populate('Product', 'name)  to retur only the name of the product
+IN this case a get returns a much more detailed version of product query
+GET http://localhost:3000/orders
+
+ To be able to upload images, we need multer which is a package similiar to boy parser where it can parse formdata.
+ To test this feature in postman we need to form-data value pairs in body.
+ name  
+ price
+ productImage
+
+customizing storage for multer:
+For example stornig certainn types of file.
+
+Create a storge using diskStorgae;
+	Detination: property to tell it where the file is to be stored
+	filename: Type of file property
+
+	After adding the storage and file filter and mimetype
+	We can store the file in database.
+
+
+#11: Authentication: 
+Same as orders and products, we need:
+1. Model with a mongoose schema
+2. route similar to products and orders
+
+To hash and encrypt the password we can user bcryopt package.
+
+Need tao add an authorization header 
+[{"key":"Authorization","value":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhmdGVzdEB0ZXN0LmNvbSIsInVzZXJJZCI6IjVhYzJkZWZlMDc5ZDE1NTZiODY3MjRkOCIsImlhdCI6MTUyMzA3MTAwMiwiZXhwIjoxNTIzMDc0NjAyfQ.UpIOeExcYOlc5GqkBGz4rxfPJ7WFQ5rF3tpc_MR4zGA","description":"","enabled":true}]
