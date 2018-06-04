@@ -1,3 +1,16 @@
+
+Make sure:
+
+npm install firebase-tools -g
+firebase init hosting
+
+
+
+
+1. Promises in an http trigger
+2. Write a firestore trigger which triggers when the database is updated.
+3. 
+
 Test firebse functions locally
 
 1. compile into javascript
