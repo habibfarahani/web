@@ -11,7 +11,7 @@ const fs = require('fs');
 
 const gcConfig = {
     projectId: "habib-functions",
-    keyFilename: "habib-functions-firebase-adminsdk-ssdbo-15e457e140.json"
+    keyFilename: "pvk.json"
 }
 
 // Make gcs a global.
@@ -23,8 +23,7 @@ const gcs = require('@google-cloud/storage')(gcConfig);
 //
 //exports.onFileChange = functions.storage.object().onFileChange
 
-
-exports.onFileChange = functions.storage.object().onFileChange(event => {
+exports.onFileChange = functions.storage.object().onFinalize(event => {
     //exports.onFileChange = functions.storage.object().finalize((event, callback) => {
     // Let's rename the file
 
