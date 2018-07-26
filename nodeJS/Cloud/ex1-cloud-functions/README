@@ -1,0 +1,15 @@
+firebase init
+
+1. Functions that react to files being uploaded
+
+    a. npm --save install @google-cloud/storage
+    b. npm --save install child-process-promise
+
+2. hhtp REST requests.
+    Can use postman to issue the calls.
+
+    a. npm --save install cors
+
+
+
+Firebase deploy will upload the function

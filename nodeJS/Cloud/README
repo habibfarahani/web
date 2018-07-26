@@ -2,7 +2,10 @@
 Make sure:
 
 npm install firebase-tools -g
+firebase login
 firebase init hosting
+or
+firebase init
 
 
 
